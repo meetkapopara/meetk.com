@@ -77,22 +77,10 @@ export const FloatingNav = ({
             <span className="text-sm !cursor-pointer">{navItem.name}</span>
           </Link>
         ))}
-      </motion.div>
-      <motion.div
-        initial={{
-          opacity: 1,
-          y: -100,
-        }}
-        animate={{
-          y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
-        }}
-        transition={{
-          duration: 0.2,
-        }}
-        className="fixed z-[5000] top-12 right-12 flex items-center"
-      >
-        <AuthButton />
+        {/* Add AuthButton to the navbar */}
+        <div className="ml-4">
+          <AuthButton />
+        </div>
       </motion.div>
     </AnimatePresence>
   );
